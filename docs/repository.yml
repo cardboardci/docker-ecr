@@ -1,0 +1,10 @@
+---
+name: Docker ECR
+slug: docker-ecr
+project: cardboardci
+namespace: []
+description: A unified tool to deploy Docker images to Amazon Elastic Container Registry (ECR).
+license:
+  name: MIT
+tags:
+  - docker
