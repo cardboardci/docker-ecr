@@ -1,0 +1,8 @@
+---
+name: github
+provider: github.com
+repository: docker-ecr
+url: https://github.com/cardboardci/docker-ecr
+clone:
+  ssh: git@github.com:cardboardci/docker-ecr.git
+  https: https://github.com/cardboardci/docker-ecr.git
