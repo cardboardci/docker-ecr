@@ -1,4 +1,4 @@
-FROM docker:18.06-dind
+FROM docker:19.03.4-dind
 COPY rootfs/ /
 RUN apk --no-cache add python2==2.7.16-r1 py2-pip==18.1-r0 groff==1.22.3-r2 less==530-r0 mailcap==2.1.48-r0
 RUN pip install --upgrade awscli==1.16.88 python-magic==0.4.15
