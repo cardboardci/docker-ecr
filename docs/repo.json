@@ -1,8 +1,0 @@
-{
-  "name": "docker-ecr",
-  "tagline": "A unified tool to deploy Docker images to Amazon Elastic Container Registry (ECR).",
-  "license": {
-    "name": "MIT"
-  },
-  "tags": ["docker", "dind", "aws", "awscli", "ecr", "registry"]
-}
