@@ -1,12 +1,13 @@
-FROM cardboardci/ci-core:focal
+FROM cardboardci/ci-core@sha256:5b93f4c8cc1ddaa809f9c27d0a865a974ccb43e5e3d38334df1b0d77ea1843fb
 USER root
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-COPY rootfs/ /
-RUN apk --no-cache add python2==2.7.16-r1 py2-pip==18.1-r0 groff==1.22.3-r2 less==530-r0 mailcap==2.1.48-r0
-RUN pip install --upgrade awscli==1.16.88 python-magic==0.4.15
-RUN apk --purge del py-pip && rm -rf /var/cache/apk/*
+COPY provision/pkglist /cardboardci/pkglist
+RUN apt-get update \
+    && xargs -a /cardboardci/pkglist apt-get install --no-install-recommends -qq -y \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 USER cardboardci
 
