@@ -1,0 +1,18 @@
+slug: docker-ecr
+description: A unified tool to deploy Docker images to Amazon Elastic Container Registry (ECR).
+project: cardboardci
+namespace: docker
+status: archived
+icon: icon.svg
+license:
+  type: MIT
+  content: Jonathan Beverly <jrbeverly>
+  year: 2019
+topics: |-
+  [
+    "awscli",
+    "ecr",
+    "dockerfile",
+    "docker-registry",
+    "aws"
+  ]
